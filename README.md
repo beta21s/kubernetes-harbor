@@ -1,18 +1,18 @@
 # kubernetes-harbor
 
-### Helm
+### Cài đặt Helm
 
 ```
 curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 ```
 
-### repo Helm Harbor
+### Thêm repo Helm Harbor
 ```
 helm repo add harbor https://helm.goharbor.io
 helm repo update
 ```
 
-### namespace cho Harbor
+### Tạo namespace cho Harbor
 
 ```
 kubectl create namespace harbor
