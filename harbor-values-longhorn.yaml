@@ -1,0 +1,40 @@
+expose:
+  type: nodePort
+  tls:
+    enabled: false
+  nodePort:
+    name: harbor
+    ports:
+      http:
+        port: 30003
+      https:
+        port: 30004
+      notary:
+        port: 30005
+externalURL: http://<YOUR_LOCAL_IP>:30003
+
+harborAdminPassword: "123456"
+
+persistence:
+  enabled: true
+  persistentVolumeClaim:
+    registry:
+      size: 5Gi
+      storageClass: longhorn
+    chartmuseum:
+      size: 2Gi
+      storageClass: longhorn
+    jobservice:
+      size: 1Gi
+      storageClass: longhorn
+    database:
+      size: 1Gi
+      storageClass: longhorn
+    redis:
+      size: 1Gi
+      storageClass: longhorn
+    trivy:
+      size: 5Gi
+      storageClass: longhorn
+
+logLevel: debug
