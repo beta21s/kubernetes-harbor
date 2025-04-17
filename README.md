@@ -50,7 +50,15 @@ Kết quả sẽ có dịch vụ harbor với NodePort 30003
 http://<YOUR_LOCAL_IP>:30002
 ```
 
-
 Username mặc định: admin
 Password: Harbor12345 (hoặc password bạn đặt trong file YAML)
+
+### Login vào Habor private CLI
+
+```
+docker login <YOUR_LOCAL_IP>:30002
+```
+
+
+
 
